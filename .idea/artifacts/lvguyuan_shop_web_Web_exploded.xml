@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="lvguyuan-shop-web:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/lvguyuan_shop_web_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="lvguyuan-shop-web/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="lvguyuan-shop-web" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

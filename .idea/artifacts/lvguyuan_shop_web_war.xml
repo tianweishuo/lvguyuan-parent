@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lvguyuan-shop-web:war">
+    <output-path>$PROJECT_DIR$/lvguyuan-shop-web/target</output-path>
+    <root id="archive" name="lvguyuan-shop-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="lvguyuan-shop-web:war exploded" />
+    </root>
+  </artifact>
+</component>

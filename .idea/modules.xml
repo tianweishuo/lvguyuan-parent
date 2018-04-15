@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lvguyuan-common/lvguyuan-common.iml" filepath="$PROJECT_DIR$/lvguyuan-common/lvguyuan-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lvguyuan-dao/lvguyuan-dao.iml" filepath="$PROJECT_DIR$/lvguyuan-dao/lvguyuan-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lvguyuan-manager-web/lvguyuan-manager-web.iml" filepath="$PROJECT_DIR$/lvguyuan-manager-web/lvguyuan-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lvguyuan-parent.iml" filepath="$PROJECT_DIR$/lvguyuan-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lvguyuan-pojo/lvguyuan-pojo.iml" filepath="$PROJECT_DIR$/lvguyuan-pojo/lvguyuan-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lvguyuan-sellergoods-interface/lvguyuan-sellergoods-interface.iml" filepath="$PROJECT_DIR$/lvguyuan-sellergoods-interface/lvguyuan-sellergoods-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lvguyuan-sellergoods-service/lvguyuan-sellergoods-service.iml" filepath="$PROJECT_DIR$/lvguyuan-sellergoods-service/lvguyuan-sellergoods-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lvguyuan-shop-web/lvguyuan-shop-web.iml" filepath="$PROJECT_DIR$/lvguyuan-shop-web/lvguyuan-shop-web.iml" />
+    </modules>
+  </component>
+</project>

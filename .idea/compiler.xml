@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lvguyuan-common" />
+        <module name="lvguyuan-dao" />
+        <module name="lvguyuan-manager-web" />
+        <module name="lvguyuan-pojo" />
+        <module name="lvguyuan-sellergoods-interface" />
+        <module name="lvguyuan-sellergoods-service" />
+        <module name="lvguyuan-shop-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lvguyuan-common" target="1.7" />
+      <module name="lvguyuan-dao" target="1.7" />
+      <module name="lvguyuan-manager-web" target="1.7" />
+      <module name="lvguyuan-parent" target="1.7" />
+      <module name="lvguyuan-pojo" target="1.7" />
+      <module name="lvguyuan-sellergoods-interface" target="1.7" />
+      <module name="lvguyuan-sellergoods-service" target="1.7" />
+      <module name="lvguyuan-shop-web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
