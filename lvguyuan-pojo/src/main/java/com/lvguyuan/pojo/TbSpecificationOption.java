@@ -2,14 +2,17 @@ package com.lvguyuan.pojo;
 
 import java.io.Serializable;
 
+/**
+ * 规格选项实体类
+ */
 public class TbSpecificationOption implements Serializable {
-    private Long id;
+    private Long id;//主键
 
-    private String optionName;
+    private String optionName;//规格选项名称
 
-    private Long specId;
+    private Long specId;//规格ID
 
-    private Integer orders;
+    private Integer orders;//排序
 
     public Long getId() {
         return id;

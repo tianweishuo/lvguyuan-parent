@@ -1,1 +1,3 @@
 com\lvguyuan\manager\controller\BrandController.class
+com\lvguyuan\manager\controller\TypeTemplateController.class
+com\lvguyuan\manager\controller\SpecificationController.class

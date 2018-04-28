@@ -10,6 +10,16 @@
       <module fileurl="file://$PROJECT_DIR$/lvguyuan-sellergoods-interface/lvguyuan-sellergoods-interface.iml" filepath="$PROJECT_DIR$/lvguyuan-sellergoods-interface/lvguyuan-sellergoods-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/lvguyuan-sellergoods-service/lvguyuan-sellergoods-service.iml" filepath="$PROJECT_DIR$/lvguyuan-sellergoods-service/lvguyuan-sellergoods-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/lvguyuan-shop-web/lvguyuan-shop-web.iml" filepath="$PROJECT_DIR$/lvguyuan-shop-web/lvguyuan-shop-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tuling-shop/shop-admin/shop-admin.iml" filepath="$PROJECT_DIR$/../tuling-shop/shop-admin/shop-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tuling-shop/shop-common/shop-common.iml" filepath="$PROJECT_DIR$/../tuling-shop/shop-common/shop-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tuling-shop/shop-goods/shop-goods.iml" filepath="$PROJECT_DIR$/../tuling-shop/shop-goods/shop-goods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tuling-shop/shop-goods-client/shop-goods-client.iml" filepath="$PROJECT_DIR$/../tuling-shop/shop-goods-client/shop-goods-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tuling-shop/shop-member/shop-member.iml" filepath="$PROJECT_DIR$/../tuling-shop/shop-member/shop-member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tuling-shop/shop-member-client/shop-member-client.iml" filepath="$PROJECT_DIR$/../tuling-shop/shop-member-client/shop-member-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tuling-shop/shop-trade/shop-trade.iml" filepath="$PROJECT_DIR$/../tuling-shop/shop-trade/shop-trade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tuling-shop/shop-trade-client/shop-trade-client.iml" filepath="$PROJECT_DIR$/../tuling-shop/shop-trade-client/shop-trade-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tuling-shop/shop-web/shop-web.iml" filepath="$PROJECT_DIR$/../tuling-shop/shop-web/shop-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tuling-shop/tlshop.iml" filepath="$PROJECT_DIR$/../tuling-shop/tlshop.iml" />
     </modules>
   </component>
 </project>

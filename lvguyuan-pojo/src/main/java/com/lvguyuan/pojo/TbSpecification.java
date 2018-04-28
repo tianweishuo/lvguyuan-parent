@@ -2,10 +2,13 @@ package com.lvguyuan.pojo;
 
 import java.io.Serializable;
 
+/**
+ * 规格表
+ */
 public class TbSpecification implements Serializable {
-    private Long id;
+    private Long id;//主键
 
-    private String specName;
+    private String specName;//规格名称
 
     public Long getId() {
         return id;

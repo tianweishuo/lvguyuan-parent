@@ -7,14 +7,19 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-    
+
     <!--名称-->
     <dubbo:application name="manager-consume"/>
+    <!--配置注册中心-->
+    <dubbo:registry protocol="zookeeper" address="${zk.address}" check="false"/>
 
-    <dubbo:registry protocol="zookeeper" address="192.168.72.20:2181,192.168.72.21:2181,192.168.27.22:2181" check="true"/>
-
-
+    <!--消费者引用-->
+    <!--品牌-->
     <dubbo:reference id="brandService" interface="com.lvguyuan.sellergoods.service.BrandService"/>
+    <!--规格-->
+    <dubbo:reference id="specificationService" interface="com.lvguyuan.sellergoods.service.SpecificationService"/>
+    <!--类型模板-->
+    <dubbo:reference id="typeTemplateService" interface="com.lvguyuan.sellergoods.service.TypeTemplateService"/>
 
     <!-- 配置dubbo的全局超时的时间    -->
     <dubbo:consumer timeout="6000000"/>

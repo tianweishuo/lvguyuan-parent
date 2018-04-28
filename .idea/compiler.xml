@@ -13,6 +13,15 @@
         <module name="lvguyuan-sellergoods-interface" />
         <module name="lvguyuan-sellergoods-service" />
         <module name="lvguyuan-shop-web" />
+        <module name="shop-admin" />
+        <module name="shop-common" />
+        <module name="shop-goods" />
+        <module name="shop-goods-client" />
+        <module name="shop-member" />
+        <module name="shop-member-client" />
+        <module name="shop-trade" />
+        <module name="shop-trade-client" />
+        <module name="shop-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,6 +33,16 @@
       <module name="lvguyuan-sellergoods-interface" target="1.7" />
       <module name="lvguyuan-sellergoods-service" target="1.7" />
       <module name="lvguyuan-shop-web" target="1.7" />
+      <module name="shop-admin" target="1.7" />
+      <module name="shop-common" target="1.7" />
+      <module name="shop-goods" target="1.7" />
+      <module name="shop-goods-client" target="1.7" />
+      <module name="shop-member" target="1.7" />
+      <module name="shop-member-client" target="1.7" />
+      <module name="shop-trade" target="1.6" />
+      <module name="shop-trade-client" target="1.7" />
+      <module name="shop-web" target="1.7" />
+      <module name="tlshop" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

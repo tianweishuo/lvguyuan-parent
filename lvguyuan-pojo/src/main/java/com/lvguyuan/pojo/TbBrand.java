@@ -5,9 +5,9 @@ import java.io.Serializable;
 public class TbBrand implements Serializable {
     private Long id;
 
-    private String name;
+    private String name;//品牌名称
 
-    private String firstChar;
+    private String firstChar;//品牌首字母
 
     public Long getId() {
         return id;
@@ -30,15 +30,6 @@ public class TbBrand implements Serializable {
     }
 
     public void setFirstChar(String firstChar) {
-        this.firstChar = firstChar == null ? null : firstChar.trim();
-    }
-
-    @Override
-    public String toString() {
-        return "TbBrand{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", firstChar='" + firstChar + '\'' +
-                '}';
+        this.firstChar = firstChar;
     }
 }

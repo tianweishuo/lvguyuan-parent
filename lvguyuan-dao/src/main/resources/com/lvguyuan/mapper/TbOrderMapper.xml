@@ -28,84 +28,12 @@
     <result column="source_type" property="sourceType" jdbcType="VARCHAR" />
     <result column="seller_id" property="sellerId" jdbcType="VARCHAR" />
   </resultMap>
-  <sql id="Example_Where_Clause" >
-    <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause" >
-    <where >
-      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
   <sql id="Base_Column_List" >
     order_id, payment, payment_type, post_fee, status, create_time, update_time, payment_time, 
     consign_time, end_time, close_time, shipping_name, shipping_code, user_id, buyer_message, 
     buyer_nick, buyer_rate, receiver_area_name, receiver_mobile, receiver_zip_code, receiver, 
     expire, invoice_type, source_type, seller_id
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.lvguyuan.pojo.TbOrderExample" >
-    select
-    <if test="distinct" >
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    from tb_order
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null" >
-      order by ${orderByClause}
-    </if>
-  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
@@ -115,12 +43,6 @@
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from tb_order
     where order_id = #{orderId,jdbcType=BIGINT}
-  </delete>
-  <delete id="deleteByExample" parameterType="com.lvguyuan.pojo.TbOrderExample" >
-    delete from tb_order
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
   </delete>
   <insert id="insert" parameterType="com.lvguyuan.pojo.TbOrder" >
     insert into tb_order (order_id, payment, payment_type, 
@@ -299,126 +221,6 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.lvguyuan.pojo.TbOrderExample" resultType="java.lang.Integer" >
-    select count(*) from tb_order
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map" >
-    update tb_order
-    <set >
-      <if test="record.orderId != null" >
-        order_id = #{record.orderId,jdbcType=BIGINT},
-      </if>
-      <if test="record.payment != null" >
-        payment = #{record.payment,jdbcType=DECIMAL},
-      </if>
-      <if test="record.paymentType != null" >
-        payment_type = #{record.paymentType,jdbcType=VARCHAR},
-      </if>
-      <if test="record.postFee != null" >
-        post_fee = #{record.postFee,jdbcType=VARCHAR},
-      </if>
-      <if test="record.status != null" >
-        status = #{record.status,jdbcType=VARCHAR},
-      </if>
-      <if test="record.createTime != null" >
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.updateTime != null" >
-        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.paymentTime != null" >
-        payment_time = #{record.paymentTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.consignTime != null" >
-        consign_time = #{record.consignTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.endTime != null" >
-        end_time = #{record.endTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.closeTime != null" >
-        close_time = #{record.closeTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.shippingName != null" >
-        shipping_name = #{record.shippingName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.shippingCode != null" >
-        shipping_code = #{record.shippingCode,jdbcType=VARCHAR},
-      </if>
-      <if test="record.userId != null" >
-        user_id = #{record.userId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.buyerMessage != null" >
-        buyer_message = #{record.buyerMessage,jdbcType=VARCHAR},
-      </if>
-      <if test="record.buyerNick != null" >
-        buyer_nick = #{record.buyerNick,jdbcType=VARCHAR},
-      </if>
-      <if test="record.buyerRate != null" >
-        buyer_rate = #{record.buyerRate,jdbcType=VARCHAR},
-      </if>
-      <if test="record.receiverAreaName != null" >
-        receiver_area_name = #{record.receiverAreaName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.receiverMobile != null" >
-        receiver_mobile = #{record.receiverMobile,jdbcType=VARCHAR},
-      </if>
-      <if test="record.receiverZipCode != null" >
-        receiver_zip_code = #{record.receiverZipCode,jdbcType=VARCHAR},
-      </if>
-      <if test="record.receiver != null" >
-        receiver = #{record.receiver,jdbcType=VARCHAR},
-      </if>
-      <if test="record.expire != null" >
-        expire = #{record.expire,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.invoiceType != null" >
-        invoice_type = #{record.invoiceType,jdbcType=VARCHAR},
-      </if>
-      <if test="record.sourceType != null" >
-        source_type = #{record.sourceType,jdbcType=VARCHAR},
-      </if>
-      <if test="record.sellerId != null" >
-        seller_id = #{record.sellerId,jdbcType=VARCHAR},
-      </if>
-    </set>
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map" >
-    update tb_order
-    set order_id = #{record.orderId,jdbcType=BIGINT},
-      payment = #{record.payment,jdbcType=DECIMAL},
-      payment_type = #{record.paymentType,jdbcType=VARCHAR},
-      post_fee = #{record.postFee,jdbcType=VARCHAR},
-      status = #{record.status,jdbcType=VARCHAR},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
-      payment_time = #{record.paymentTime,jdbcType=TIMESTAMP},
-      consign_time = #{record.consignTime,jdbcType=TIMESTAMP},
-      end_time = #{record.endTime,jdbcType=TIMESTAMP},
-      close_time = #{record.closeTime,jdbcType=TIMESTAMP},
-      shipping_name = #{record.shippingName,jdbcType=VARCHAR},
-      shipping_code = #{record.shippingCode,jdbcType=VARCHAR},
-      user_id = #{record.userId,jdbcType=VARCHAR},
-      buyer_message = #{record.buyerMessage,jdbcType=VARCHAR},
-      buyer_nick = #{record.buyerNick,jdbcType=VARCHAR},
-      buyer_rate = #{record.buyerRate,jdbcType=VARCHAR},
-      receiver_area_name = #{record.receiverAreaName,jdbcType=VARCHAR},
-      receiver_mobile = #{record.receiverMobile,jdbcType=VARCHAR},
-      receiver_zip_code = #{record.receiverZipCode,jdbcType=VARCHAR},
-      receiver = #{record.receiver,jdbcType=VARCHAR},
-      expire = #{record.expire,jdbcType=TIMESTAMP},
-      invoice_type = #{record.invoiceType,jdbcType=VARCHAR},
-      source_type = #{record.sourceType,jdbcType=VARCHAR},
-      seller_id = #{record.sellerId,jdbcType=VARCHAR}
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.lvguyuan.pojo.TbOrder" >
     update tb_order
     <set >

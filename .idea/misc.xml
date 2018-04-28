@@ -4,11 +4,17 @@
     <file type="web" url="file://$PROJECT_DIR$/lvguyuan-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/lvguyuan-sellergoods-service" />
     <file type="web" url="file://$PROJECT_DIR$/lvguyuan-shop-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../tuling-shop/shop-admin" />
+    <file type="web" url="file://$PROJECT_DIR$/../tuling-shop/shop-goods" />
+    <file type="web" url="file://$PROJECT_DIR$/../tuling-shop/shop-member" />
+    <file type="web" url="file://$PROJECT_DIR$/../tuling-shop/shop-trade" />
+    <file type="web" url="file://$PROJECT_DIR$/../tuling-shop/shop-web" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../tuling-shop/pom.xml" />
       </list>
     </option>
   </component>
