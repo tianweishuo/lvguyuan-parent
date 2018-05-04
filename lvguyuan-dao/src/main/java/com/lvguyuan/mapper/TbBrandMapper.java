@@ -3,6 +3,7 @@ package com.lvguyuan.mapper;
 import com.lvguyuan.pojo.TbBrand;
 
 import java.util.List;
+import java.util.Map;
 
 public interface TbBrandMapper {
     int deleteByPrimaryKey(Long id);
@@ -18,4 +19,6 @@ public interface TbBrandMapper {
     int updateByPrimaryKey(TbBrand record);
 
     List<TbBrand> findAll(TbBrand tbBrand);
+
+    List<Map> selectOptionList();
 }

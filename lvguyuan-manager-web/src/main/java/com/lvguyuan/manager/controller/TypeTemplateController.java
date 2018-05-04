@@ -16,7 +16,8 @@ import java.util.List;
  * Date: 2018/4/25
  * Time: 15:07
  */
-@RestController("/typeTemplate")
+@RestController()
+@RequestMapping("/typeTemplate")
 public class TypeTemplateController {
 
     @Resource
@@ -43,13 +44,13 @@ public class TypeTemplateController {
 
     /**
      * 增加
-     * @param tbTypeTemplate
+     * @param typeTemplate
      * @return
      */
     @RequestMapping("/add")
-    public Result add(@RequestBody TbTypeTemplate tbTypeTemplate){
+    public Result add(@RequestBody TbTypeTemplate typeTemplate){
         try {
-            typeTemplateService.add(tbTypeTemplate);
+            typeTemplateService.add(typeTemplate);
             return new Result(true, "增加成功");
         } catch (Exception e) {
             e.printStackTrace();
@@ -59,13 +60,13 @@ public class TypeTemplateController {
 
     /**
      * 修改
-     * @param tbTypeTemplate
+     * @param typeTemplate
      * @return
      */
     @RequestMapping("/update")
-    public Result update(@RequestBody TbTypeTemplate tbTypeTemplate){
+    public Result update(@RequestBody TbTypeTemplate typeTemplate){
         try {
-            typeTemplateService.update(tbTypeTemplate);
+            typeTemplateService.update(typeTemplate);
             return new Result(true, "修改成功");
         } catch (Exception e) {
             e.printStackTrace();

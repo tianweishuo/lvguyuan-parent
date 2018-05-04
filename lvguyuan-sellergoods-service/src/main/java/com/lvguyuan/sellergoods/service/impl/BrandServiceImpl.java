@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 @Service("brandService")
 public class BrandServiceImpl implements BrandService{
@@ -99,5 +100,14 @@ public class BrandServiceImpl implements BrandService{
         for(Long id:ids){
             brandMapper.deleteByPrimaryKey(id);
         }
+    }
+
+    /**
+     * 返回下拉列表
+     * @return
+     */
+    @Override
+    public List<Map> selectOptionList() {
+        return brandMapper.selectOptionList();
     }
 }

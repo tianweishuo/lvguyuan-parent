@@ -2,16 +2,19 @@ package com.lvguyuan.pojo;
 
 import java.io.Serializable;
 
+/**
+ * 模板表
+ */
 public class TbTypeTemplate implements Serializable {
-    private Long id;
+    private Long id;//主键
 
-    private String name;
+    private String name;//模板名称
 
-    private String specIds;
+    private String specIds;//关联规格(json格式)
 
-    private String brandIds;
+    private String brandIds;//关联品牌(json格式)
 
-    private String customAttributeItems;
+    private String customAttributeItems;//扩展属性
 
     public Long getId() {
         return id;

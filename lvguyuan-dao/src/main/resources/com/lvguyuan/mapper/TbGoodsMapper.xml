@@ -35,6 +35,9 @@
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.lvguyuan.pojo.TbGoods" >
+    <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="id">
+      select LAST_INSERT_ID() AS id
+    </selectKey>
     insert into tb_goods (id, seller_id, goods_name, 
       default_item_id, audit_status, is_marketable, 
       brand_id, caption, category1_id, 
@@ -49,6 +52,9 @@
       #{isDelete,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lvguyuan.pojo.TbGoods" >
+    <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="id">
+      select LAST_INSERT_ID() AS id
+    </selectKey>
     insert into tb_goods
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

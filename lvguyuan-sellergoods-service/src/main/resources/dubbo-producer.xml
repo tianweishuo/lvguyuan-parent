@@ -20,5 +20,8 @@
     <dubbo:service retries="0" ref="specificationService" interface="com.lvguyuan.sellergoods.service.SpecificationService"/>
     <!--类型模板-->
     <dubbo:service retries="0" ref="typeTemplateService" interface="com.lvguyuan.sellergoods.service.TypeTemplateService"/>
-
+    <!--商品分类-->
+    <dubbo:service retries="0" ref="itemCatService" interface="com.lvguyuan.sellergoods.service.ItemCatService"/>
+    <!--商品-->
+    <dubbo:service retries="0" ref="goodsService" interface="com.lvguyuan.sellergoods.service.GoodsService"/>
 </beans>

@@ -4,6 +4,7 @@ import com.lvguyuan.pojo.TbBrand;
 import com.lvguyuan.sellergoods.service.BrandService;
 import entity.PageResult;
 import entity.Result;
+import org.aspectj.weaver.ast.Literal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/brand")
@@ -110,4 +112,13 @@ public class BrandController {
         return brandService.findPage(brand,page,rows);
     }
 
+    /**
+     * 返回下拉列表
+     * @return
+     */
+    @RequestMapping("/selectOptionList")
+    private List<Map> selectOptionList(){
+        List<Map> list = brandService.selectOptionList();
+        return list;
+    }
 }

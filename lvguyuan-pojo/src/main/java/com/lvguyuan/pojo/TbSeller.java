@@ -3,13 +3,25 @@ package com.lvguyuan.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 商户信息
+ */
 public class TbSeller implements Serializable {
+    /**
+     * 用户ID
+     */
     private String sellerId;
-
+    /**
+     * 公司名
+     */
     private String name;
-
+    /**
+     * 店铺名称
+     */
     private String nickName;
-
+    /**
+     * 密码
+     */
     private String password;
 
     private String email;

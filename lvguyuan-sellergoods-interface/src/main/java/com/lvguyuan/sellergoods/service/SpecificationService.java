@@ -5,6 +5,7 @@ import com.lvguyuan.pojogrop.Specification;
 import entity.PageResult;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA
@@ -56,5 +57,11 @@ public interface SpecificationService{
      * @return
      */
     PageResult findPage(TbSpecification specification, int pageNum, int pageSize);
+
+    /**
+     * 规格下拉列表
+     * @return
+     */
+    List<Map> selectOptionList();
 
 }

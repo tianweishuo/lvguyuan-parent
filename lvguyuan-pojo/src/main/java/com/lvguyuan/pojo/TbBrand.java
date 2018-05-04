@@ -2,12 +2,22 @@ package com.lvguyuan.pojo;
 
 import java.io.Serializable;
 
+/**
+ * 品牌表
+ */
 public class TbBrand implements Serializable {
+    /**
+     * 品牌ID
+     */
     private Long id;
-
-    private String name;//品牌名称
-
-    private String firstChar;//品牌首字母
+    /**
+     * 品牌名称
+     */
+    private String name;
+    /**
+     * 品牌首字母
+     */
+    private String firstChar;
 
     public Long getId() {
         return id;

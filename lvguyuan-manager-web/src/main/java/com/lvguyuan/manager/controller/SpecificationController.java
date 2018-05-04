@@ -18,6 +18,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 规格控制层
@@ -120,5 +121,14 @@ public class SpecificationController {
     @RequestMapping("/search")
     public PageResult search(@RequestBody TbSpecification specification, int page, int rows  ){
         return specificationService.findPage(specification, page, rows);
+    }
+
+    /**
+     * 规格下拉列表
+     * @return
+     */
+    @RequestMapping("/selectOptionList")
+    public List<Map> selectOptionList(){
+        return specificationService.selectOptionList();
     }
 }

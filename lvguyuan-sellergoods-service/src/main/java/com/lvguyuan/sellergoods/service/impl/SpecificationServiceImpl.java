@@ -135,4 +135,13 @@ public class SpecificationServiceImpl implements SpecificationService {
         Page<TbSpecification> list = (Page<TbSpecification>)specificationMapper.findAll(tbSpecification);
         return new PageResult(list.getTotal(),list.getResult());
     }
+
+    /**
+     * 规格下拉列表
+     * @return
+     */
+    @Override
+    public List<Map> selectOptionList() {
+        return specificationMapper.selectOptionList();
+    }
 }

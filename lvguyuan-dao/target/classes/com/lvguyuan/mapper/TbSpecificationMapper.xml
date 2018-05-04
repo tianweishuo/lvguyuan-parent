@@ -26,6 +26,9 @@
       </trim>
     </where>
   </select>
+  <select id="selectOptionList" resultType="java.util.Map">
+    select id,spec_name as text from tb_specification
+  </select>
   <!--删除-->
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from tb_specification

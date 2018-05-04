@@ -4,18 +4,21 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * 商品明细
+ */
 public class TbItem implements Serializable {
-    private Long id;
+    private Long id;//商品ID
 
-    private String title;
+    private String title;//商品名称
 
     private String sellPoint;
 
-    private BigDecimal price;
+    private BigDecimal price;//商品价格
 
     private Integer stockCount;
 
-    private Integer num;
+    private Integer num;//商品数量
 
     private String barcode;
 

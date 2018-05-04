@@ -4,8 +4,13 @@ package com.lvguyuan.sellergoods.service;
 import com.lvguyuan.pojo.TbBrand;
 import entity.PageResult;
 
+import java.awt.*;
 import java.util.List;
+import java.util.Map;
 
+/**
+ * 商品分配
+ */
 public interface BrandService {
 
     /**
@@ -55,4 +60,9 @@ public interface BrandService {
      * @param ids
      */
     void delete(Long[] ids);
+
+    /**
+     * 返回下拉列表属性
+     */
+    List<Map> selectOptionList();
 }

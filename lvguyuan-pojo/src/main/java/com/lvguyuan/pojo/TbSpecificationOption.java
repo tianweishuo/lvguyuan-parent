@@ -3,7 +3,7 @@ package com.lvguyuan.pojo;
 import java.io.Serializable;
 
 /**
- * 规格选项实体类
+ * 规格选择表
  */
 public class TbSpecificationOption implements Serializable {
     private Long id;//主键

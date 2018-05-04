@@ -87,8 +87,8 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lvguyuan.pojo.TbTypeTemplate" >
-    update tb_type_template
-    set name = #{name,jdbcType=VARCHAR},
+    update tb_type_template set
+      name = #{name,jdbcType=VARCHAR},
       spec_ids = #{specIds,jdbcType=VARCHAR},
       brand_ids = #{brandIds,jdbcType=VARCHAR},
       custom_attribute_items = #{customAttributeItems,jdbcType=VARCHAR}

@@ -1,9 +1,11 @@
 package com.lvguyuan.sellergoods.service;
 
+import com.lvguyuan.pojo.TbItemCat;
 import com.lvguyuan.pojo.TbTypeTemplate;
 import entity.PageResult;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 模板管理接口
@@ -27,12 +29,12 @@ public interface TypeTemplateService {
     /**
      * 增加
      */
-    void add(TbTypeTemplate tbTypeTemplate);
+    void add(TbTypeTemplate typeTemplate);
 
     /**
      * 修改
      */
-    void update(TbTypeTemplate tbTypeTemplate);
+    void update(TbTypeTemplate typeTemplate);
 
     /**
      * 根据ID获取实体
@@ -53,7 +55,12 @@ public interface TypeTemplateService {
      * @param pageSize 每页记录数
      * @return
      */
-    PageResult findPage(TbTypeTemplate tbTypeTemplate, int pageNum, int pageSize);
+    PageResult findPage(TbTypeTemplate typeTemplate, int pageNum, int pageSize);
 
-
+    /**
+     * 根据模板列表查找规格
+     * @param id
+     * @return
+     */
+    List<Map> findSpecList(Long id);
 }

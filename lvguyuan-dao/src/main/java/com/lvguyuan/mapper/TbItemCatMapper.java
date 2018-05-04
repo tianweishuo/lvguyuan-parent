@@ -2,6 +2,8 @@ package com.lvguyuan.mapper;
 
 import com.lvguyuan.pojo.TbItemCat;
 
+import java.util.List;
+
 public interface TbItemCatMapper {
     int deleteByPrimaryKey(Long id);
 
@@ -14,4 +16,6 @@ public interface TbItemCatMapper {
     int updateByPrimaryKeySelective(TbItemCat record);
 
     int updateByPrimaryKey(TbItemCat record);
+
+    List<TbItemCat> findByParentId(Long parentId);
 }
